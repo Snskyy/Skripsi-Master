@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style/Main.css" />
+  <link rel="stylesheet" href="./style/Stock-History.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo logo-full" id="logoFull">(nama toko)</span>
+        <button class="toggle-btn" id="toggleBtn">
+          <i class="fas fa-xmark" id="toggleIcon"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <a href="./Dashboard.html"><li><i class="fas fa-home"></i><span>Home</span></li></a>
+        <a href="./Product.html"><li class="active"><i class="fas fa-boxes"></i><span>Product</span></li></a>
+        <li><i class="fas fa-chart-line"></i><span>Reports</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+    </nav>
+
+   <!-- main content -->
+  <div class="stockContainer">
+        <!-- <a href="index.html" class="btn">⬅️ Kembali ke Stok</a> -->
+
+        <h2>📋 Riwayat Stok Barang</h2>
+        <div>
+            <input type="text" id="searchHistory" placeholder="Cari nama produk...">
+            <select id="filterType">
+            <option value="">Semua Aksi</option>
+            <option value="Masuk">Masuk</option>
+            <option value="Keluar">Keluar</option>
+            <option value="Penyesuaian">Penyesuaian</option>
+            </select>
+            <br>
+            <label>Dari: <input type="date" id="startDate"></label>
+            <label>Sampai: <input type="date" id="endDate"></label>
+            <button class="btn" onclick="resetFilter()">🔄 Reset Filter</button>
+
+        </div>
+        
+
+        <table>
+            <thead>
+            <tr>
+                <th>Waktu</th>
+                <th>Produk</th>
+                <th>Aksi</th>
+                <th>Jumlah</th>
+                <th>Gudang</th>
+            </tr>
+            </thead>
+            <tbody id="historyTable"></tbody>
+        </table>
+
+        <br>
+        
+    </div>
+
+  <script src="./script/Main.js"></script>
+  <script src="./script/Stock-History.js"></script>
+</body>
+</html>

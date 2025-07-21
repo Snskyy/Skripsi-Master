@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/User-Management.css">
+</head>
+<body>
+    <h1>👥 User Management</h1>
+    <button onclick="location.href='add-user.html'">➕ Add New User</button>
+
+  <!-- Section 1: User List -->
+  <div class="section">
+    <h2>👤 User List</h2>
+    <table id="user-table">
+      <thead>
+        <tr><th>ID</th><th>Username</th><th>Role</th><th>Change Role</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Section 2: Role Permissions -->
+  <div class="section">
+    <h2>🔐 Role Access Settings</h2>
+    <table>
+      <thead>
+        <tr><th>Role</th><th>Can Add</th><th>Can Edit</th><th>Can Delete</th><th>Can View</th></tr>
+      </thead>
+      <tbody id="role-settings">
+        <!-- Permissions will be rendered here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section 3: Audit Trail -->
+  <div class="section">
+    <h2>📜 Audit Trail (User Activity)</h2>
+    <div id="audit-trail" class="log"></div>
+  </div>
+
+
+
+    <script src="./script/User-Management.js"></script>
+</body>
+</html>

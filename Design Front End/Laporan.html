@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/Laporan.css">
+</head>
+<body>
+    <h1>Laporan & Analitik</h1>
+
+    <div class="filter-bar">
+      <select id="jenisLaporan">
+        <option value="stok">Laporan Stok</option>
+        <option value="penjualan">Laporan Penjualan</option>
+        <option value="pembelian">Laporan Pembelian</option>
+        <option value="produk_laris">Produk Paling Laku</option>
+        <option value="retur">Laporan Retur</option>
+      </select>
+  
+      <input type="date" id="tanggalMulai">
+      <input type="date" id="tanggalAkhir">
+  
+      <button class="btn" onclick="tampilkanLaporan()">Tampilkan</button>
+      <button class="btn" onclick="exportExcel()">Export Excel</button>
+      <button class="btn" onclick="exportPDF()">Export PDF</button>
+    </div>
+  
+    <table id="tabelLaporan">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>Jenis</th>
+          <th>Produk</th>
+          <th>Jumlah</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Isi laporan -->
+      </tbody>
+      <script src="./script/Laporan.js"></script>
+</body>
+</html>

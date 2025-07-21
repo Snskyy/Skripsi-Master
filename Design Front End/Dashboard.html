@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style/Main.css" />
+  <link rel="stylesheet" href="./style/Dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo logo-full" id="logoFull">(nama toko)</span>
+        <button class="toggle-btn" id="toggleBtn">
+          <i class="fas fa-xmark" id="toggleIcon"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <a href="./Dashboard.html"><li class="active"><i class="fas fa-home"></i><span>Home</span></li></a>
+        <a href="./Product.html"><li><i class="fas fa-boxes"></i><span>Product</span></li></a>
+        <li><i class="fas fa-chart-line"></i><span>Reports</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <!-- Top Stats -->
+      <div class="grid">
+        <div class="card stat">
+          <h3>Total Produk</h3>
+          <p>120</p>
+        </div>
+        <div class="card stat">
+          <h3>Stok Keseluruhan</h3>
+          <p>3,560</p>
+        </div>
+        <div class="card stat">
+          <h3>Penjualan Bulan Ini</h3>
+          <p>Rp 42.000.000</p>
+        </div>
+      </div>
+    
+      <!-- Graph Section -->
+      <div class="card">
+        <h2>Grafik Penjualan</h2>
+        <canvas id="salesChart" height="200"></canvas>
+      </div>
+    
+      <!-- Table Section -->
+      <div class="card">
+        <h2>Aktivitas Terakhir</h2>
+        <table class="activity-table">
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Aktivitas</th>
+              <th>Pengguna</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10 Apr</td>
+              <td>Tambah Produk: "Minyak Goreng 2L"</td>
+              <td>Admin</td>
+            </tr>
+            <tr>
+              <td>09 Apr</td>
+              <td>Stok Keluar: "Beras 5Kg"</td>
+              <td>Gudang 1</td>
+            </tr>
+            <tr>
+              <td>08 Apr</td>
+              <td>Sinkronisasi Shopee</td>
+              <td>System</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    
+
+
+
+
+  </div>
+
+  <script src="./script/Main.js"></script>
+</body>
+</html>

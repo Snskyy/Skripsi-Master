@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style/Main.css" />
+  <link rel="stylesheet" href="./style/Stock.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo logo-full" id="logoFull">(nama toko)</span>
+        <button class="toggle-btn" id="toggleBtn">
+          <i class="fas fa-xmark" id="toggleIcon"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <a href="./Dashboard.html"><li><i class="fas fa-home"></i><span>Home</span></li></a>
+        <a href="./Product.html"><li class="active"><i class="fas fa-boxes"></i><span>Product</span></li></a>
+        <li><i class="fas fa-chart-line"></i><span>Reports</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+    </nav>
+
+   <!-- main content -->
+  
+   <div class="container">
+
+        <h1>Manajemen Stok</h1>
+
+       
+        <button class="btn" onclick="openModal()">+ Tambah Stok</button>
+        <button class="btn" onclick="window.location.href='riwayat.html'">📜 Lihat Riwayat</button>
+
+
+
+
+        <!-- Modal Form -->
+        <div id="stockModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Tambah Stok Baru</h2>
+            <div class="form-group">
+            <label for="modalProduct">Nama Produk:</label>
+            <input type="text" id="modalProduct">
+            </div>
+            <div class="form-group">
+            <label for="modalQty">Jumlah Stok:</label>
+            <input type="number" id="modalQty">
+            </div>
+            <div class="form-group">
+            <label for="modalWarehouse">Pilih Gudang:</label>
+            <select id="modalWarehouse">
+                <option value="Gudang A">Gudang A</option>
+                <option value="Gudang B">Gudang B</option>
+            </select>
+            </div>
+            <button class="btn" onclick="addStockFromModal()">Simpan</button>
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label for="search">🔍 Cari Produk:</label>
+            <input type="text" id="search" placeholder="Masukkan nama produk..." />
+          </div>
+          
+        <div class="section-title">📋 Daftar Stok (Real-time)</div>
+        <table>
+            <thead>
+                <tr>
+                <th>Produk</th>
+                <th>Gudang</th>
+                <th>Stok</th>
+                <th>Status</th>
+                <th>Status</th>
+                <th>Status</th>
+                <th>Status</th>
+                <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="stockTable">
+                <!-- Isi via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+  <script src="./script/Main.js"></script>
+  <script src="./script/Stock.js"></script>
+</body>
+</html>

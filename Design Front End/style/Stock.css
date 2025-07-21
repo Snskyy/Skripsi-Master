@@ -1,0 +1,108 @@
+.container {
+    width: 90%;
+    margin: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .status-low {
+    background: #ffdddd;
+    color: #d8000c;
+  }
+
+  .status-ok {
+    background: #ddffdd;
+    color: #4f8a10;
+  }
+
+  .form-group {
+    margin: 10px 0;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, select, button {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: #0056b3;
+  }
+
+  .section-title {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #searchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  #stockTable tr:hover {
+    background-color: #f0f8ff;
+  }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/PembelianV2.css">
+</head>
+<body>
+    
+  <h2>🛒 Purchase Entry</h2>
+
+  <div class="form-section">
+    <label>Supplier</label>
+    <select id="supplier">
+      <option value="Supplier A">Supplier A</option>
+      <option value="Supplier B">Supplier B</option>
+    </select>
+
+    <label>Product Name</label>
+    <input type="text" id="product-name" placeholder="Enter product name" />
+
+    <label>Quantity</label>
+    <input type="number" id="product-qty" placeholder="Enter quantity" />
+
+    <label>Price</label>
+    <input type="number" id="product-price" placeholder="Enter price per unit" />
+
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="cart-section">
+    <h3>🧺 Cart</h3>
+    <div id="cart">
+      <!-- Cart table will appear here -->
+    </div>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <div class="history-section">
+    <h2>📜 Purchase History</h2>
+    <div id="history">
+      <!-- History items will appear here -->
+    </div>
+  </div>
+    <script src="./script/PembelianV2.Js"></script>
+</body>
+</html>

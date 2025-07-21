@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/SupplierCustomer.css">
+</head>
+<body>
+    
+  <h1>Manajemen Supplier & Pelanggan</h1>
+
+  <div class="toolbar">
+    <div>
+      <input type="text" id="searchInput" placeholder="Cari nama...">
+      <select id="filterTipe">
+        <option value="all">Semua</option>
+        <option value="supplier">Supplier</option>
+        <option value="pelanggan">Pelanggan</option>
+      </select>
+    </div>
+    <button class="btn" onclick="openModal()">+ Tambah Kontak</button>
+  </div>
+
+  <table id="contactTable">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Tipe</th>
+        <th>Kontak</th>
+        <th>Total Transaksi</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Baris kontak akan di-generate di sini -->
+    </tbody>
+  </table>
+
+  <div class="top-list">
+    <h3>Top Supplier / Pelanggan</h3>
+    <ul id="topList">
+      <li>Loading...</li>
+    </ul>
+  </div>
+
+  <!-- Modal Form -->
+  <div class="modal" id="modalForm">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Tambah Kontak</h3>
+      <form id="contactForm">
+        <label>Name:</label><br>
+        <input type="text" id="nama" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="text" id="email"><br><br>
+
+        <label>Phone:</label><br>
+        <input type="text" id="phone"><br><br>
+
+        <label>Address:</label><br>
+        <input type="text" id="address"><br><br>
+
+        <label>Type:</label><br>
+        <select id="tipe">
+          <option value="supplier">Supplier</option>
+          <option value="pelanggan">Pelanggan</option>
+        
+        </select><br><br>
+
+        <button type="submit" class="btn">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Riwayat -->
+<div class="modal" id="modalRiwayat">
+    <div class="modal-content" style="width: 600px;">
+      <span class="close" onclick="closeRiwayat()">&times;</span>
+      <h3>Riwayat Transaksi</h3>
+      <div id="riwayatTitle" style="margin-bottom: 10px;"></div>
+      <table style="width: 100%; font-size: 14px;">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Jenis</th>
+            <th>Produk</th>
+            <th>Jumlah</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="riwayatBody">
+          <!-- Riwayat akan muncul di sini -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./script/SupplierCustomer.js"></script>
+</body>
+</html>

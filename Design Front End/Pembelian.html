@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style/Main.css" />
+  <link rel="stylesheet" href="./style/Pembelian.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo logo-full" id="logoFull">(nama toko)</span>
+        <button class="toggle-btn" id="toggleBtn">
+          <i class="fas fa-xmark" id="toggleIcon"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <a href="./Dashboard.html"><li><i class="fas fa-home"></i><span>Home</span></li></a>
+        <a href="./Product.html"><li class="active"><i class="fas fa-boxes"></i><span>Product</span></li></a>
+        <li><i class="fas fa-chart-line"></i><span>Reports</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+    </nav>
+
+   <!-- main content -->
+    <div class="pembelianContainer">
+        <!-- Modal Tambah Supplier -->
+        <div id="supplierModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Tambah Supplier</h2>
+            <div class="form-group">
+                <label>Nama Supplier</label>
+                <input type="text" id="namaSupplier" placeholder="Nama Supplier">
+            </div>
+            <div class="form-group">
+                <label>Nomor Kontak</label>
+                <input type="text" id="kontakSupplier" placeholder="Nomor Kontak">
+            </div>
+            <div class="form-group">
+                <label>Alamat</label>
+                <input type="text" id="alamatSupplier" placeholder="Alamat Supplier">
+            </div>
+            <button onclick="tambahSupplier()">+ Simpan Supplier</button>
+            </div>
+        </div>
+        
+        <!-- Button untuk membuka modal -->
+        <button onclick="openModal()">+ Tambah Supplier</button>
+  
+  
+        <h2>🛒 Tambah Pembelian Barang</h2>
+
+        <div>
+            <div class="form-group">
+                <label>Nama Produk</label>
+                <select id="produkSelect">
+                    <option value="">-- Pilih Produk --</option>
+                    <option value="Kaos Polos">Kaos Polos</option>
+                    <option value="Jaket Hoodie">Jaket Hoodie</option>
+                    <option value="Celana Jeans">Celana Jeans</option>
+                </select>
+            </div>
+          
+      
+          <div class="form-group">
+            <label>Jumlah</label>
+            <input type="number" id="jumlahInput" min="1" placeholder="Contoh: 50">
+          </div>
+      
+          <div class="form-group">
+            <label>Supplier</label>
+            <select id="supplierSelect">
+                <option value="">-- Pilih Supplier --</option>
+                <!-- Daftar Supplier akan diisi otomatis -->
+            </select>
+
+          </div>
+      
+          <div class="form-group">
+            <label>Harga Satuan (Rp)</label>
+            <input type="number" id="hargaInput" min="0" placeholder="Contoh: 25000">
+          </div>
+      
+          <div class="form-group">
+            <label>Tanggal Pembelian</label>
+            <input type="date" id="tanggalInput">
+          </div>
+      
+          <button onclick="tambahPembelian()">+ Simpan Pembelian</button>
+        </div>
+      
+        <h3>🔎 Filter Riwayat Pembelian</h3>
+        <input type="text" id="searchInput" placeholder="Cari nama produk atau supplier..." oninput="renderTable()">
+        <br><br>
+        <label>Dari: <input type="date" id="startDate" onchange="renderTable()"></label>
+        <label>Sampai: <input type="date" id="endDate" onchange="renderTable()"></label>
+        
+        <h2>📋 Riwayat Pembelian</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Produk</th>
+              <th>Jumlah</th>
+              <th>Supplier</th>
+              <th>Harga Total</th>
+            </tr>
+          </thead>
+          <tbody id="pembelianTable"></tbody>
+        </table>
+      
+        <a href="index.html" class="btn-kembali">⬅️ Kembali ke Stok</a>
+    </div>
+
+  <script src="./script/Main.js"></script>
+  <script src="./script/Pembelian.js"></script>
+</body>
+</html>

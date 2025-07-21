@@ -1,0 +1,36 @@
+.stockContainer{
+    width: 90%;
+    margin: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.btn {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  #searchHistory, #filterType {
+    padding: 8px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button.btn {
+    margin-top: 10px;
+  }
+  

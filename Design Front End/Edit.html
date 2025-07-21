@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style/Main.css" />
+  <link rel="stylesheet" href="./style/Edit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo logo-full" id="logoFull">(nama toko)</span>
+        <button class="toggle-btn" id="toggleBtn">
+          <i class="fas fa-xmark" id="toggleIcon"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <a href="./Dashboard.html"><li><i class="fas fa-home"></i><span>Home</span></li></a>
+        <a href="./Product.html"><li class="active"><i class="fas fa-boxes"></i><span>Product</span></li></a>
+        <li><i class="fas fa-chart-line"></i><span>Reports</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+    </nav>
+
+   <!-- main content -->
+   <div class="product-form">
+        <h2>Edit Produk</h2>
+        <form>
+            <div class="form-group">
+                <label for="productName">Nama Produk</label>
+                <input type="text" id="productName" value="Minyak Goreng 2L" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="productCategory">Kategori Produk</label>
+                <div style="display: flex; gap: 10px;">
+                    <select id="productCategory" required style="flex: 1;">
+                    <option value="">-- Pilih Kategori --</option>
+                    </select>
+                    <button type="button" class="btn-small" id="openCategoryModal">Kelola</button>
+                </div>
+            </div>
+              
+              <!-- Modal Tambah Kategori -->
+            <div class="modal" id="categoryModal">
+                <div class="modal-content">
+                    <span class="close-btn" id="closeModal">&times;</span>
+                    <h3>Tambah Kategori Baru</h3>
+                    <input type="text" id="newCategoryInput" placeholder="Nama Kategori">
+                    <button type="button" class="btn-small" id="addCategoryBtn">Tambah</button>
+                    <ul id="categoryListPreview" class="category-list"></ul>
+                </div>
+            </div>
+        
+              <div class="form-group">
+                <label>Varian Stock</label>
+                <div id="variantContainer">
+                  <!-- Varian dinamis ditambahkan di sini -->
+                </div>
+                <button type="button" id="addVariantBtn" class="btn-small">+ Tambah Varian</button>
+            </div>
+            
+        
+            <div class="form-group">
+                <label for="productPrice">Harga</label>
+                <input type="text" id="productPrice" value="28000" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="productImages">Upload Gambar Produk (bisa lebih dari 1)</label>
+                <input type="file" id="productImages" multiple accept="image/*">
+                <div id="previewContainer" style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;"></div>
+              </div>
+        
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Simpan</button>
+                <button type="button" class="btn-cancel">Batal</button>
+            </div>
+        </form>
+    </div>
+  
+    
+
+
+
+
+  </div>
+
+  <script src="./script/Form-Product.js"></script>
+  <script src="./script/Main.js"></script>
+</body>
+</html>

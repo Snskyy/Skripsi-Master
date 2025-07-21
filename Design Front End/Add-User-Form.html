@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/Add-User-Form.css">
+</head>
+<body>
+    <div class="form">
+        <h2>➕ Add New User</h2>
+    
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username" />
+    
+        <label>Role</label>
+        <select id="role">
+          <option value="admin">Admin</option>
+          <option value="staff">Staff</option>
+          <option value="viewer">Viewer</option>
+        </select>
+    
+        <button onclick="saveUser()">Save User</button>
+      </div>
+      <script src="./script/Add-User-Form.js"></script>
+</body>
+</html>

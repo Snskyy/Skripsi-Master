@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style/Main.css" />
+  <link rel="stylesheet" href="./style/Product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo logo-full" id="logoFull">(nama toko)</span>
+        <button class="toggle-btn" id="toggleBtn">
+          <i class="fas fa-xmark" id="toggleIcon"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <a href="./Dashboard.html"><li><i class="fas fa-home"></i><span>Home</span></li></a>
+        <a href="./Product.html"><li class="active"><i class="fas fa-boxes"></i><span>Product</span></li></a>
+        <li><i class="fas fa-chart-line"></i><span>Reports</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+    </nav>
+
+   <!-- main content -->
+   <main class="content">
+        <div class="page-header">
+            <h2>Product</h2>
+            <button class="btn-add">add product</button>
+        </div>
+  
+        <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="./Product-Detail.html">
+              <div class="img-frame">
+                  <img src="./ex-product.jpg" alt="gambar tidak ditemukan">
+              </div>
+            </a>
+            <div class="product-component">
+                <div class="information">
+                    <a href="./Product-Detail.html" class="product-link">
+                      <h3>Minyak Goreng BIMOLI SANIA DANES MI KANCIL 2Liter(title)</h3>
+                    </a>
+                    <p>Category</p>
+                    <p>Price: Rp 28.000.000</p>
+                    <p>Stock: 25</p>
+                    <p>Varian : S, M L</p>
+                    
+                </div>
+                <!-- <div class="actions">
+                    <a href="./Edit.html"><button class="btn-edit">Edit</button></a>
+                    <button class="btn-delete">Hapus</button>
+                </div> -->
+            </div>
+            
+          </div>
+  
+    
+
+       
+      
+    </div>
+  </main>
+    
+
+
+
+
+  </div>
+
+  <script src="./script/Main.js"></script>
+</body>
+</html>

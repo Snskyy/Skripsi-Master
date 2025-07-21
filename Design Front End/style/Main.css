@@ -1,0 +1,132 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f8;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: rgb(31, 37, 41);
+    color: white;
+    width: 250px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar.collapsed {
+    width: 70px;
+  }
+  
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 1rem; */
+    padding: 0 20px;
+    min-height: 55px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+  }
+  
+  .logo-full {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .sidebar.collapsed .logo-full {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .sidebar.collapsed .toggle-btn {
+    /* opacity: 0; */
+    margin-right: 10px;
+    /* pointer-events: none; */
+  }
+
+  
+  .logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  
+  /* .sidebar.collapsed .logo-full {
+    display: none;
+  } */
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Menu */
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  
+  .nav-links li {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    height: 50px;
+    gap: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .nav-links li:hover {
+    background-color: #34495e;
+  }
+  
+  .nav-links li.active {
+    background-color: #1abc9c;
+  }
+  
+  .nav-links li i {
+    font-size: 16px;
+    min-width: 20px;
+    text-align: center;
+  }
+  .nav-links li span {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+  .sidebar.collapsed li span {
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+  }
+
+
+  .content{
+    width: 100%;
+    transition: all 0.3s ease;
+  }

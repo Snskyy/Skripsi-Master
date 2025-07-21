@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./style/Main.css" />
+  <link rel="stylesheet" href="./style/Product-Detail.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo logo-full" id="logoFull">(nama toko)</span>
+        <button class="toggle-btn" id="toggleBtn">
+          <i class="fas fa-xmark" id="toggleIcon"></i>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <a href="./Dashboard.html"><li><i class="fas fa-home"></i><span>Home</span></li></a>
+        <a href="./Product.html"><li class="active"><i class="fas fa-boxes"></i><span>Product</span></li></a>
+        <li><i class="fas fa-chart-line"></i><span>Reports</span></li>
+        <li><i class="fas fa-cog"></i><span>Settings</span></li>
+      </ul>
+    </nav>
+
+   <!-- main content -->
+    <main>
+      <div class="product-detail">
+          <div class="product-images" id="productImageGallery">
+            <img src="./ex-product.jpg" alt="">
+            <img src="./ex-product.jpg" alt="">
+            
+          </div>
+
+          <div class="product-info">
+            <h1>Mi Kancil </h1>
+            <p class="desc">Menjual mi ayam dengan rasa yang rich, sedap, dan bikin nagih gila</p>
+            <div class="category">
+              <h4>Category : </h4>
+              <p> Mi ayam</p>
+            </div>
+            <div class="variant-section">
+                <h4>Stock</h4>
+                <p>S : 25</p>
+                <p>M : 25</p>
+                <p>L : 25</p>
+                <ul id="detailProductVariants"></ul>
+            </div>
+
+            <div class="action-buttons">
+                <button id="editProductBtn">✏️ Edit</button>
+                <button id="deleteProductBtn">🗑️ Hapus</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./script/Main.js"></script>
+</body>
+</html>
